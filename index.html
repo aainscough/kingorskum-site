@@ -1,4 +1,281 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>King or Skum?</title>
-<style>html,body{margin:0;height:100%;background:#120c08;color:#f3dfa8;font-family:Georgia,serif;display:grid;place-items:center;text-align:center}h1{font-size:clamp(40px,8vw,96px);margin:0}p{opacity:.8}a{color:#ffd667}</style></head>
-<body><div><h1>👑 King or Skum? 🦠</h1><p>The realm is being forged. Return soon.</p><p><a href="https://www.roblox.com/games/122461342035272">Play now on Roblox</a></p></div></body></html>
-<!-- deploy test 06:17 -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>King or Skum? | A Roblox Realm Where One Rules and Everyone Wants the Crown</title>
+<meta name="description" content="King or Skum? is a free fantasy king-of-the-hill adventure on Roblox. Slay monsters, earn renown, seize the Lionheart Crown, and hold it while the whole realm comes for you.">
+<meta name="theme-color" content="#0d0a12">
+<link rel="canonical" href="https://kingorskum.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="King or Skum?">
+<meta property="og:title" content="King or Skum? | One throne. A hundred hands reaching for it.">
+<meta property="og:description" content="A free fantasy king-of-the-hill adventure on Roblox. Rise from Skum to King, rule the realm, and watch your back.">
+<meta property="og:image" content="https://kingorskum.com/img/og.jpg">
+<meta property="og:url" content="https://kingorskum.com/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="img/crown.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Cinzel+Decorative:wght@700;900&family=Pirata+One&family=Spectral:ital,wght@0,400;0,600;1,400&family=Spectral+SC:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="preload" as="image" href="img/hero.webp">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<!-- ======================= NAV ======================= -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="King or Skum? home">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><use href="#crown"/></svg>
+      <span class="full">King <i style="font-style:italic;font-weight:400;opacity:.7">or</i> <span class="skum">Skum?</span></span>
+    </a>
+    <ul id="menu">
+      <li><a href="#legend">The Legend</a></li>
+      <li><a href="#wheel">The Crown</a></li>
+      <li><a href="#realm">The Realm</a></li>
+      <li><a href="#bounties">Bounties</a></li>
+      <li><a href="#folk">Folk</a></li>
+      <li><a href="#secrets">Secrets</a></li>
+    </ul>
+    <a class="btn btn-play" href="https://www.roblox.com/games/122461342035272" target="_blank" rel="noopener">Play Free</a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu">Menu</button>
+  </div>
+</header>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff0c2"/><stop offset=".5" stop-color="#eebf5a"/><stop offset="1" stop-color="#a5711c"/></linearGradient>
+    <symbol id="crown" viewBox="0 0 64 64">
+      <path fill="url(#gold)" stroke="#5b3b0e" stroke-width="2" stroke-linejoin="round" d="M8 46 4 18l15 13 13-21 13 21 15-13-4 28z"/>
+      <rect x="8" y="47" width="48" height="8" rx="1.5" fill="url(#gold)" stroke="#5b3b0e" stroke-width="2"/>
+      <circle cx="4" cy="17" r="3.4" fill="#fff0c2" stroke="#5b3b0e" stroke-width="1.6"/><circle cx="32" cy="9" r="3.6" fill="#fff0c2" stroke="#5b3b0e" stroke-width="1.6"/><circle cx="60" cy="17" r="3.4" fill="#fff0c2" stroke="#5b3b0e" stroke-width="1.6"/>
+      <circle cx="32" cy="35" r="4" fill="#c4362d" stroke="#5b3b0e" stroke-width="1.4"/><circle cx="19" cy="38" r="2.6" fill="#3a8fd1"/><circle cx="45" cy="38" r="2.6" fill="#3a8fd1"/>
+    </symbol>
+  </defs>
+</svg>
+
+<main id="top">
+
+<!-- ======================= HERO ======================= -->
+<section class="hero">
+  <div class="hero-bg" role="img" aria-label="Lionsgate at dusk: lanterns glow across the market rooftops, the White Tower shines, and Castle Lionheart waits beneath the World Tree."></div>
+  <canvas id="embers"></canvas>
+  <div class="wrap">
+    <svg class="crown-mark" viewBox="0 0 64 64" aria-hidden="true"><use href="#crown"/></svg>
+    <h1 class="title">King<span class="or">or</span><span class="skum">Skum?</span></h1>
+    <p class="tagline">There is one throne in Lionsgate. There are a hundred hands reaching for it. Every coin you earn feeds the King, and every King falls in the end.</p>
+    <div class="hero-cta">
+      <a class="btn btn-play" href="https://www.roblox.com/games/122461342035272" target="_blank" rel="noopener">Play Free on Roblox</a>
+      <a class="btn btn-ghost" href="#legend">Read the Legend</a>
+    </div>
+    <div class="hero-meta">Fantasy adventure · King of the Hill · PvE &amp; PvP · Free to play</div>
+  </div>
+  <span class="scroll-cue" aria-hidden="true"></span>
+</section>
+
+<!-- ======================= PROLOGUE ======================= -->
+<section class="page prologue" id="legend">
+  <div class="wrap cols">
+    <div>
+      <div class="eyebrow">The Legend of the Lionheart Crown</div>
+      <h2>A crown that will not stay on any one head</h2>
+      <div class="lore">
+        <p>A hundred years ago, the black dragon <em>Vyrthrax the Undying</em> burned the old kingdom to the stone. Its lords hid in their towers and let the villages burn. Only one man walked into the Dragon's Maw: a farmhand named <em>Aldric</em>, with a pitchfork and nothing left to lose.</p>
+        <p>Nobody knows what Aldric said to the dragon. He walked out alive, the dragon went to sleep, and Aldric came home with a crown hammered from the gold the beast had been sleeping on. The people made him King. On his first morning he climbed the castle steps and swore an oath that still binds the realm.</p>
+        <p>The crown remembers that oath. It slides off the head of any ruler the realm stops talking about and goes looking for whoever is doing the talked-about things: slaying beasts, finishing the impossible quests, toppling Kings. The bards call that fame <em>renown</em>. Everyone else calls it a target.</p>
+        <p>So in Lionsgate there are only two things you can be. The proverb is older than the castle: <em>you are either King, or you are Skum.</em> Everyone starts at the bottom of that sentence.</p>
+      </div>
+      <blockquote class="oath">“Let no King rule forever. When a better soul comes along, let the crown leave my head and go to theirs, even if they are only a farmhand.”</blockquote>
+    </div>
+    <div class="stack">
+      <figure class="plate rv"><img src="img/castle.webp" alt="Castle Lionheart, blue-roofed towers rising from a misty valley beneath the World Tree" loading="lazy"><figcaption>Castle Lionheart, seat of whoever is brave enough this hour.</figcaption></figure>
+      <figure class="plate rv"><img src="img/lionsgate.webp" alt="The timber-framed rooftops of Lionsgate with the White Tower and the castle beyond" loading="lazy"><figcaption>Lionsgate, where every trade pays the King's Tax.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= THE WHEEL ======================= -->
+<section class="sec wheel" id="wheel">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">The wheel of the crown</div>
+      <h2>Rise. Rule. Fall. Repeat.</h2>
+      <p>Every server is its own kingdom, and every kingdom is a race. Your rank is set by your renown, and your rank makes you stronger or weaker. Nobody stays on top for long.</p>
+    </div>
+    <div class="ranks">
+      <ol class="ladder rv" aria-label="The ranks of the realm, from highest to lowest">
+        <li class="king"><b>King</b><span>One crown. Taxes every coin in the realm. Hunted by everyone.</span></li>
+        <li><b>Jack</b><span>The King's right hand, and first in line if the King falls.</span></li>
+        <li><b>Knight</b><span>Sword of the court. A bounty hangs on your head.</span></li>
+        <li><b>Worker</b><span>Honest blades with ambition.</span></li>
+        <li><b>Peasant</b><span>Mud on your boots, fire in your eyes.</span></li>
+        <li class="scum"><b>Skum</b><span>Where every legend begins. Usually also where it ends.</span></li>
+      </ol>
+      <div class="acts">
+        <div class="act rv"><div class="num">I</div><div><h3>Rise</h3><p>Start with a rusty sword and a hundred gold. Hunt chickens at Sunnybrook Farm, then goblins, werewolves, raptors and storm titans. Every quest, every kill and every royal you topple earns renown. Climb the ladder fast, because one death sends you back to the bottom.</p></div></div>
+        <div class="act rv"><div class="num">II</div><div><h3>Rule</h3><p>Earn the most renown and the crown finds you. Command the town guards, proclaim royal decrees, and watch the King's Tax pour into your coffers. The longer you reign, the higher the tax, and the angrier the realm.</p></div></div>
+        <div class="act fall rv"><div class="num">III</div><div><h3>Fall</h3><p>Slay the King and you plunder his coffers and plunge Lionsgate into <em>Anarchy</em>: ten minutes of every soul for themselves, after which the most renowned stands crowned. Or whisper to Fennick the coin-flipper and start a civil war from inside the court.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= ATLAS ======================= -->
+<section class="sec atlas" id="realm">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">An atlas of the realm</div>
+      <h2>Beyond the market walls</h2>
+      <p>Walk to a land's waystone once and it remembers you forever. Every land has its own monsters, its own quests and a boss that has eaten better adventurers than you.</p>
+    </div>
+    <div class="regions">
+      <button class="region wide rv" data-full="img/tikihana.webp" data-cap="Tikihana Jungle: raptors stalk the trail below Thundering Falls."><img src="img/tikihana-sm.webp" alt="" loading="lazy"><span class="cap"><span class="tag">Tikihana Jungle · Lv 17–24</span><h3>The Thundering Falls</h3><p>Raptors run in packs, tiki shamans chant in the trees, and something with very big teeth sleeps behind the waterfall.</p></span></button>
+      <button class="region rv" data-full="img/firstblood.webp" data-cap="Greenhollow Vale: every legend's first swing is at a goblin."><img src="img/firstblood-sm.webp" alt="" loading="lazy"><span class="cap"><span class="tag">Greenhollow Vale · Lv 2–7</span><h3>First Blood</h3><p>Goblin scrappers, hollow creepers, and the first real fight of your life.</p></span></button>
+      <button class="region rv" data-full="img/moravek.webp" data-cap="Castle Moravek, lit red from within. The Count does not receive visitors. He receives dinner."><img src="img/moravek-sm.webp" alt="" loading="lazy"><span class="cap"><span class="tag">Moonfang Woods · Lv 13–20</span><h3>Castle Moravek</h3><p>Werewolves howl in the woods. Beneath the castle, behind a blood-sealed door, the Count waits.</p></span></button>
+      <button class="region wide rv" data-full="img/atlantis.webp" data-cap="Atlantis: the Sea King's fountain, the Druid's Grotto and the Abyssal Vault."><img src="img/atlantis-sm.webp" alt="" loading="lazy"><span class="cap"><span class="tag">Beneath the waves</span><h3>Atlantis</h3><p>A drowned city of shell-domed shops and light that falls in shafts through the water. The druids here sell talismans that turn you into a bear. Yes, a bear.</p></span></button>
+      <button class="region rv" data-full="img/stormcrown.webp" data-cap="The Acropolis of Stormcrown Peaks, where the gods carved themselves into the mountain."><img src="img/stormcrown-sm.webp" alt="" loading="lazy"><span class="cap"><span class="tag">Stormcrown Peaks · Lv 20–26</span><h3>The Acropolis</h3><p>Storm titans guard the stair. The statues are watching you climb.</p></span></button>
+      <button class="region rv" data-full="img/olympus.webp" data-cap="The Arena of Olympus, built on a cloud above the world."><img src="img/olympus-sm.webp" alt="" loading="lazy"><span class="cap"><span class="tag danger">Trials of Olympus</span><h3>The Arena in the Clouds</h3><p>Survive the trials above the sky realm and Kronos the Stormlord comes down to fight you himself.</p></span></button>
+      <button class="region rv" data-full="img/colosseum.webp" data-cap="The Colosseum. Hardcore rules: lose here and the winner takes everything you carried in."><img src="img/colosseum-sm.webp" alt="" loading="lazy"><span class="cap"><span class="tag danger">Hardcore PvP</span><h3>The Colosseum</h3><p>Walk through the gate and you agree to the oldest rule in Lionsgate: the winner takes everything.</p></span></button>
+      <button class="region wide rv" data-full="img/goblintown.webp" data-cap="The gate of Goblintown. The sign is not a suggestion."><img src="img/goblintown-sm.webp" alt="" loading="lazy"><span class="cap"><span class="tag">Greenhollow Vale</span><h3>Goblintown: No Humies!!</h3><p>The gate stays shut for anyone with a human face. Snik sells a very convincing goblin disguise, and the goblins inside have a comedy hut. Nobody asks how good the jokes are.</p></span></button>
+      <button class="region rv" data-full="img/lionsgate.webp" data-cap="Lionsgate: the market, the Royal Bank, the White Tower, and the castle that owns them all."><img src="img/lionsgate-sm.webp" alt="" loading="lazy"><span class="cap"><span class="tag">Town · Safe zone</span><h3>Lionsgate</h3><p>Smiths, armorers, fletchers and an enchanter, all happy to sell you a better sword. The King takes his cut of every coin.</p></span></button>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= BOUNTIES ======================= -->
+<section class="sec bounties" id="bounties">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Nailed to the Herald's board</div>
+      <h2>Wanted: dead, ideally</h2>
+      <p>Every land has a tyrant. Slay one and the whole realm hears your name. Slay all of them, then take the crown without dying once, and you become <em>The One True King</em>.</p>
+    </div>
+    <div class="board">
+      <article class="poster raid rv">
+        <img src="img/vyrthrax.webp" alt="Vyrthrax the Undying, a black dragon with burning red eyes, in the Dragon's Maw" loading="lazy">
+        <div class="body">
+          <div class="w">Raid boss</div>
+          <h3>Vyrthrax the Undying</h3>
+          <p>A hundred years asleep on a bed of melted crowns. Every child in Lionsgate grows up hearing his name. Lately the Maw has been warm again, and the whelps have started hatching.</p>
+          <p class="hint">Dragon's Maw · Level 22–30 · Bring friends. Bring a lot of friends.</p>
+        </div>
+      </article>
+      <article class="poster rv" style="--r:-1.5deg"><div class="w">Wanted</div><h3>Grubnik the Rotten</h3><div class="where">Chief of Goblintown</div><div class="lvl">Greenhollow Vale</div></article>
+      <article class="poster rv" style="--r:1.2deg"><div class="w">Wanted</div><h3>The Broodmother</h3><div class="where">Queen of a thousand legs</div><div class="lvl">Spider Hollow</div></article>
+      <article class="poster rv" style="--r:-.8deg"><div class="w">Wanted</div><h3>Scorchtail, the Magma King</h3><div class="where">The volcano in the Hollow</div><div class="lvl">Ashen Caldera</div></article>
+      <article class="poster rv" style="--r:1.6deg"><div class="w">Wanted</div><h3>Queen Skyrend</h3><div class="where">Mother of storms and feathers</div><div class="lvl">Hippogryph Highlands</div></article>
+      <article class="poster rv" style="--r:-1.2deg"><div class="w">Wanted</div><h3>The Moonfang Alpha</h3><div class="where">Leader of the pack</div><div class="lvl">Moonfang Woods</div></article>
+      <article class="poster rv" style="--r:.9deg"><div class="w">Wanted</div><h3>Count Moravek</h3><div class="where">Bring a stake. Bring two.</div><div class="lvl">Castle Moravek</div></article>
+      <article class="poster rv" style="--r:-1.7deg"><div class="w">Wanted</div><h3>The Great Tiki Kahuna</h3><div class="where">Speaks for the masks</div><div class="lvl">Tikihana Jungle</div></article>
+      <article class="poster rv" style="--r:1.1deg"><div class="w">Wanted</div><h3>The Tyrant Rex</h3><div class="where">Behind the waterfall</div><div class="lvl">Tikihana Jungle</div></article>
+      <article class="poster rv" style="--r:-.6deg"><div class="w">Wanted</div><h3>The Ifrit</h3><div class="where">The flicker at the heart of the Maze</div><div class="lvl">The Molten Maze</div></article>
+      <article class="poster rv" style="--r:1.4deg"><div class="w">Wanted</div><h3>Kronos the Stormlord</h3><div class="where">Lord of the arena in the clouds</div><div class="lvl">Trials of Olympus</div></article>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= FOLK ======================= -->
+<section class="sec folk" id="folk">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Folk of the realm</div>
+      <h2>Friends, foes &amp; the taxman</h2>
+      <p>Not everyone in Lionsgate wants to kill you. Some only want your gold. One wants to talk about the weather.</p>
+    </div>
+    <div class="cast">
+      <article class="who rv">
+        <div class="pic"><img src="img/mortimer-sm.webp" alt="Mortimer Tithe in his top hat beside a wheelbarrow heaped with glowing diamonds and somebody's sword" loading="lazy"></div>
+        <div class="txt"><span class="role">Royal Tax Collector</span><h3>Mortimer Tithe</h3><p>Stay away from the realm for more than a day and Mortimer comes round with his wheelbarrow. Your gear is the King's now. It's the law. He's very sorry. (He isn't.)</p><q>Nothing personal, friend. Just paperwork.</q></div>
+      </article>
+      <article class="who rv">
+        <div class="pic"><img src="img/genie-sm.webp" alt="A blue genie with a curled beard floats over a lava sea, facing an adventurer holding a golden lamp" loading="lazy"></div>
+        <div class="txt"><span class="role">Bound to a lamp</span><h3>The Genie of the Hollow</h3><p>Some say if you fall far enough out of the world, someone at the bottom grants wishes. Some say the wishes come with very small print.</p><q>Three wishes? Who told you three?</q></div>
+      </article>
+      <article class="who rv">
+        <div class="pic"><img src="img/reginald-sm.webp" alt="Sir Reginald Woofington, a dog in a top hat and monocle, sipping tea up a jungle tree" loading="lazy"></div>
+        <div class="txt"><span class="role">Enjoyer of small talk</span><h3>Sir Reginald Woofington</h3><p>A gentleman of the highest branch. Climb the vine, sit a while and talk about the weather. He has never once asked you to slay anything, and he's wonderful company.</p><q>Lovely day for it, isn't it? For what, you ask? For anything at all.</q></div>
+      </article>
+      <article class="who rv" tabindex="0">
+        <div class="pic"><img src="img/flower-happy-sm.webp" alt="A cheerful yellow flower with a smiling face" loading="lazy"><img class="alt" src="img/flower-angry-sm.webp" alt="The same flower glaring with an angry face" loading="lazy"></div>
+        <div class="txt"><span class="role">???</span><h3>???</h3><p>A friendly little flower in the far corner of the realm. Very friendly. So friendly. Go ahead, talk to it.</p><q>You sure like that EXP, don't you?</q><span class="hint">Hover or tap to say hello.</span></div>
+      </article>
+      <article class="who textonly rv"><div class="txt"><span class="role">Voice of the plaza</span><h3>The Herald</h3><p>Stands by the fountain answering every question a new adventurer has ever asked, usually at length. Ask him about the dragon. Then ask him why his hands shake.</p></div></article>
+      <article class="who textonly rv"><div class="txt"><span class="role">Guildmaster, The Crooked Dagger</span><h3>Ruffus</h3><p>Pays in Dark Tokens for every royal you put in the dirt. Level ten, one royal kill to your name, and no crown on your head, or the bouncers won't let you down the stairs.</p></div></article>
+      <article class="who textonly rv"><div class="txt"><span class="role">Keeper of the Spirit Realm</span><h3>Seraphine</h3><p>The last face you see after the first time you die, and the first face you see after. She sends you back lighter: no renown, no gear, half your experience. Try not to visit often.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= TALES ======================= -->
+<section class="sec tales" id="tales">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Tales from the realm</div>
+      <h2>Moments worth a bard</h2>
+      <p>Click any scene to see it larger.</p>
+    </div>
+    <div class="reel">
+      <button class="shot rv" data-full="img/throne.webp" data-cap="Crowned at last. The Lawmaker has already started writing your tax decree."><img src="img/throne-sm.webp" alt="An adventurer stands on the golden throne with a sword raised, beside the Lawmaker's lectern" loading="lazy"><span class="cap"><b>Long may you reign</b>Roughly eleven minutes, on average.</span></button>
+      <button class="shot rv" data-full="img/fallen.webp" data-cap="The Colosseum. Lose here and the winner takes everything."><img src="img/fallen-sm.webp" alt="An adventurer lies face-down in the Colosseum while a knight with a blue shield walks away" loading="lazy"><span class="cap"><b>You have fallen</b>Your gold is safe. Your dignity is not.</span></button>
+      <button class="shot rv" data-full="img/firstblood.webp" data-cap="Sword up, goblin down. Probably."><img src="img/firstblood-sm.webp" alt="An adventurer raises a sword at a goblin in tall grass outside the Lionsgate Market" loading="lazy"><span class="cap"><b>Everyone starts somewhere</b>Usually face to face with a goblin.</span></button>
+      <button class="shot rv" data-full="img/mortimer.webp" data-cap="Mortimer Tithe and the wheelbarrow of regret."><img src="img/mortimer-sm.webp" alt="Mortimer and his wheelbarrow of diamonds on the castle road" loading="lazy"><span class="cap"><b>Logged off for a day?</b>Mortimer will take it from here.</span></button>
+      <button class="shot rv" data-full="img/genie.webp" data-cap="A wish granted over a sea of lava. Read the small print."><img src="img/genie-sm.webp" alt="The genie floats above a lava sea" loading="lazy"><span class="cap"><b>Careful what you wish for</b>He's a genie, not a charity.</span></button>
+      <button class="shot rv" data-full="img/hero.webp" data-cap="Lionsgate at dusk."><img src="img/hero-sm.webp" alt="Lionsgate at dusk with its lanterns lit" loading="lazy"><span class="cap"><b>Home</b>Lanterns lit, coffers full, King nervous.</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= SECRETS ======================= -->
+<section class="sec secrets" id="secrets">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Whispered in the Crooked Dagger</div>
+      <h2>The realm keeps secrets</h2>
+      <p>Some are worth diamonds. Some are worth a story. None of them are on any map.</p>
+    </div>
+    <div class="riddles">
+      <div class="riddle rv"><p>“Fall far enough and someone at the bottom will grant your wishes. Wish carefully. He keeps receipts.”</p><span>Heard near the goblin rocks</span></div>
+      <div class="riddle rv"><p>“A gentleman lives where the jungle grows tall. He has never fought a monster. He has never needed to.”</p><span>Overheard at the Tikihana trailhead</span></div>
+      <div class="riddle rv"><p>“In the far corner of the realm, something is smiling at you. Keep talking until there's nothing left to say.”</p><span>Scratched into a waystone</span></div>
+      <div class="riddle rv"><p>“The chickens of Sunnybrook remember every one of their fallen. Every hundredth, they come for you.”</p><span>Sunnybrook Farm, unofficially</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= FINAL CALL ======================= -->
+<section class="call" id="play">
+  <div class="call-bg" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="eyebrow">The throne is empty. For now.</div>
+    <h2>King <i style="font-family:var(--body);font-weight:400;font-size:.4em;letter-spacing:.2em;color:var(--parch)">or</i> <span class="skum">Skum?</span></h2>
+    <p>The crown is out there looking for its next head. It doesn't care where you come from. It only cares what the realm is saying about you.</p>
+    <div class="hero-cta">
+      <a class="btn btn-play" href="https://www.roblox.com/games/122461342035272" target="_blank" rel="noopener">Play Free on Roblox</a>
+      <a class="btn btn-ghost" href="https://www.roblox.com/communities/665873810" target="_blank" rel="noopener">Join Luthinor Games (+30 diamonds)</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 Luthinor Games · King or Skum? is a game on Roblox. Not affiliated with Roblox Corporation.</div>
+    <nav aria-label="Footer">
+      <a href="https://www.roblox.com/games/122461342035272" target="_blank" rel="noopener">Play on Roblox</a>
+      <a href="https://www.roblox.com/communities/665873810" target="_blank" rel="noopener">Luthinor Games group</a>
+      <a href="#top">Back to top</a>
+    </nav>
+  </div>
+</footer>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Screenshot viewer">
+  <button type="button" id="lbClose">Close ✕</button>
+  <figure><img id="lbImg" alt=""><figcaption id="lbCap"></figcaption></figure>
+</div>
+
+<script src="assets/site.js" defer></script>
+</body>
+</html>
