@@ -1,3 +1,4 @@
+if (!window.__kosSite) { window.__kosSite = true;
 (function () {
   var nav = document.getElementById('nav');
   var menuBtn = document.getElementById('menuBtn');
@@ -87,3 +88,5 @@
 (function(){var b=document.querySelector('.sticky-play');if(!b)return;var end=document.getElementById('play')||document.querySelector('.call');
 function f(){var y=window.scrollY,past=y>window.innerHeight*0.8,nearEnd=end&&end.getBoundingClientRect().top<window.innerHeight*0.9;b.classList.toggle('show',past&&!nearEnd);}
 window.addEventListener('scroll',f,{passive:true});f();})();
+
+}
