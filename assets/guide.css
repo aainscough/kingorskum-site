@@ -197,5 +197,6 @@ kbd{display:inline-block;min-width:1.9em;text-align:center;font-family:var(--hea
 .loot-strip img{aspect-ratio:1220/272;object-fit:contain;background:#10102a}
 .toc-cta{margin-top:26px}
 .ch .cta-row{margin-top:30px}
-
-@media (max-width:620px){.arch .plaque{white-space:normal;text-align:center;width:88%;font-size:13px}}
+.bubble h1.kw{font-family:var(--heading);font-size:clamp(22px,2.4vw,30px);line-height:1.2;color:#3a2610;margin:0 0 10px}
+.bubble .greet{font-family:var(--display);font-size:clamp(26px,3.4vw,40px);line-height:1.08;color:#3a2610;margin:0 0 14px!important}
+.bubble .crumbs ol{color:#6b4a22;margin-bottom:10px}.bubble .crumbs a{color:#6b4a22}
