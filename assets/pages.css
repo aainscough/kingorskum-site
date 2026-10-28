@@ -80,3 +80,8 @@
 .lm-bar{height:12px;margin-top:10px;border-radius:6px;background:rgba(255,255,255,.08);overflow:hidden}
 .lm-bar i{display:block;height:100%;border-radius:6px;background:linear-gradient(90deg,#7a2eb0,#e8be50);transition:width .6s}
 .lm-sub{margin-top:8px;font-size:14px;color:#cfc3b0}
+.glance-mini{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:18px 0 6px}
+.glance-mini div{border:1px solid rgba(232,190,80,.35);border-radius:10px;padding:12px 8px;text-align:center;background:rgba(96,34,146,.16)}
+.glance-mini b{display:block;font-family:Cinzel,serif;font-size:26px;color:var(--gold-hi,#f3d27a)}
+.glance-mini span{font-size:13px;color:#cfc3b0}
+@media (max-width:560px){.glance-mini{grid-template-columns:repeat(2,minmax(0,1fr))}}
