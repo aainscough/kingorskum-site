@@ -1,0 +1,7 @@
+build/
+*.orig.html
+__pycache__/
+*.pyc
+.env
+.DS_Store
+*.zip
