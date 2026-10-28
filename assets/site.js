@@ -7,7 +7,7 @@
   function onScroll() { nav.classList.toggle('solid', window.scrollY > 40 || nav.classList.contains('open')); }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
-  menuBtn.addEventListener('click', function () {
+  if (menuBtn) menuBtn.addEventListener('click', function () {
     var open = !nav.classList.contains('open');
     nav.classList.toggle('open', open);
     menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
@@ -36,15 +36,17 @@
     lb.hidden = false; document.body.style.overflow = 'hidden'; lbClose.focus();
   }
   function closeLb() { lb.hidden = true; lbImg.src = ''; document.body.style.overflow = ''; if (lastFocus) lastFocus.focus(); }
-  document.querySelectorAll('[data-full]').forEach(function (el) {
+  if (lb) document.querySelectorAll('[data-full]').forEach(function (el) {
     el.addEventListener('click', function () {
       var img = el.querySelector('img');
       openLb(el.getAttribute('data-full'), el.getAttribute('data-cap'), img && img.alt);
     });
   });
-  lbClose.addEventListener('click', closeLb);
-  lb.addEventListener('click', function (e) { if (e.target === lb) closeLb(); });
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !lb.hidden) closeLb(); });
+  if (lb) {
+    lbClose.addEventListener('click', closeLb);
+    lb.addEventListener('click', function (e) { if (e.target === lb) closeLb(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !lb.hidden) closeLb(); });
+  }
 
   // the flower card responds to taps on phones too
   document.querySelectorAll('.who[tabindex]').forEach(function (card) {
@@ -81,3 +83,7 @@
     }
   })();
 })();
+// mobile: a play bar slides up once you've scrolled past the hero, and hides near the final call
+(function(){var b=document.querySelector('.sticky-play');if(!b)return;var end=document.getElementById('play')||document.querySelector('.call');
+function f(){var y=window.scrollY,past=y>window.innerHeight*0.8,nearEnd=end&&end.getBoundingClientRect().top<window.innerHeight*0.9;b.classList.toggle('show',past&&!nearEnd);}
+window.addEventListener('scroll',f,{passive:true});f();})();

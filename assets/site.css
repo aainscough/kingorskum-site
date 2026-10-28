@@ -250,3 +250,17 @@ footer a:hover{color:var(--gold-hi)}
   *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
   .js .rv.pre{transform:none;opacity:1}
 }
+
+/* ---------- conversion: contextual play calls ---------- */
+.cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;margin-top:48px}
+.cta-row span{color:var(--muted);font-style:italic;font-size:16px}
+.cta-row.on-parch{margin-top:34px}
+.cta-row.on-parch span{color:#6b4a22}
+.who .more{font-family:var(--heading);font-size:15px;color:var(--gold-hi);text-decoration:none;margin-top:4px}
+.who .more:hover{text-decoration:underline}
+.sticky-play{display:none}
+@media (max-width:760px){
+  .sticky-play{display:flex;position:fixed;left:max(14px,env(safe-area-inset-left,0px));right:max(14px,env(safe-area-inset-right,0px));bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:60;transform:translateY(140%);transition:transform .35s}
+  .sticky-play.show{transform:none}
+  body{padding-bottom:70px}
+}
