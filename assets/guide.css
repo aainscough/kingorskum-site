@@ -176,5 +176,26 @@ kbd{display:inline-block;min-width:1.9em;text-align:center;font-family:var(--hea
   .meter{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 .split>*,.cards>*,.ledger>*{min-width:0}
+
+/* class accordion */
+.classes{display:grid;gap:8px;margin:10px 0 8px}
+.cls{border:1px solid var(--line);background:var(--ink-3)}
+.cls summary{display:flex;align-items:center;gap:12px;padding:12px 16px;cursor:pointer;list-style:none;font-size:17px}
+.cls summary::-webkit-details-marker{display:none}
+.cls summary b{font-family:var(--heading);color:var(--gold-hi);flex:1}
+.cls summary .ic{font-size:20px;width:28px;text-align:center}
+.cls summary .price{font-variant-numeric:tabular-nums;color:var(--parch);font-size:15px}
+.cls summary::after{content:"+";font-family:var(--heading);color:var(--gold);font-size:20px;width:18px;text-align:center;transition:transform .2s}
+.cls[open] summary::after{transform:rotate(45deg)}
+.cls[open]{border-color:var(--gold-lo)}
+.cls ul{margin:0;padding:2px 20px 14px 58px;font-size:16px}
+.cls li{margin-bottom:.35em}
+.cls summary:hover{background:rgba(227,181,82,.08)}
+.shot-fig.wide{margin:6px 0 22px}
+.shot-fig.wide img{aspect-ratio:21/9}
+.loot-strip{margin:4px 0 16px}
+.loot-strip img{aspect-ratio:1220/272;object-fit:contain;background:#10102a}
+.toc-cta{margin-top:26px}
+.ch .cta-row{margin-top:30px}
+
 @media (max-width:620px){.arch .plaque{white-space:normal;text-align:center;width:88%;font-size:13px}}
-.bubble h1{font-variant-ligatures:no-common-ligatures no-discretionary-ligatures}
