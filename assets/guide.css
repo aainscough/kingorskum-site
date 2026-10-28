@@ -176,3 +176,5 @@ kbd{display:inline-block;min-width:1.9em;text-align:center;font-family:var(--hea
   .meter{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 .split>*,.cards>*,.ledger>*{min-width:0}
+@media (max-width:620px){.arch .plaque{white-space:normal;text-align:center;width:88%;font-size:13px}}
+.bubble h1{font-variant-ligatures:no-common-ligatures no-discretionary-ligatures}
